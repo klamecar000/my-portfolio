@@ -1,38 +1,145 @@
-.App {
+/* App.css */
+
+/* 1. Resetting basic margins and padding for a clean slate */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif; /* Modern font */
+  background-color: #000; /* Black background */
+  color: white; /* White text */
+  line-height: 1.6;
+}
+
+/* 2. Header and logo */
+header {
+  display: flex;
+  justify-content: space-between; /* Space between logo and navigation */
+  align-items: center;
+  padding: 1rem 2rem; /* Space around header */
+  background-color: #111; /* Dark gray background for header */
+}
+
+header img {
+  max-height: 50px; /* Keep logo size proportional */
+}
+
+/* 3. Navigation bar */
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px; /* Space between links */
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  color: #f4f4f4; /* Light hover effect */
+}
+
+/* 4. Home Section */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  text-align: center;
+  padding: 20px;
+}
+
+#home h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#home p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+/* 5. About Section */
+#about {
+  padding: 60px 20px;
+  background-color: #111;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#about p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 6. Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* 7. Responsive Design */
+@media (max-width: 768px) {
+  /* For mobile devices */
+  #home h2 {
+    font-size: 2.5rem;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  #home p {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+
+  /* In App.css */
+
+/* Header styling */
+header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1rem 2rem;
+  background-color: #111;
 }
 
-.App-link {
-  color: #61dafb;
+header img {
+  max-height: 50px; /* Set max height for the logo */
+  max-width: 200px; /* Optional: limit width if logo is too big */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
